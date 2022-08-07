@@ -15,21 +15,21 @@ const sidebar = () => {
         <Link to='/' style={{ textDecoration: 'none' }}>
           <div className="logo">Mitramas Infosys Global</div>
         </Link>
-        <div className="header2">Layanan IT</div>
+        <div className="header2"></div>
       </div>
       <hr />
       <div className="center">
         <ul>
           <p className='titleSidebar'>Main Menu</p>
           <Link to='/' style={{ textDecoration: 'none' }}>
-            <li>
+            <li class='active'>
               <GridViewRoundedIcon className='icon' />
               <span>Dashboard</span>
             </li>
           </Link>
           <p className='titleSidebar'>List</p>
           <Link to='/list-user' style={{ textDecoration: 'none' }}>
-            <li>
+            <li class='active'>
               <PersonRoundedIcon className='icon' />
               <span>Users</span>
             </li>

@@ -1,14 +1,661 @@
-.home{
+.home {
     display: flex;
+    background-color: #f4faf5;
+
     .homeContainer {
         // background-color: lightblue;
         flex: 6;
-        .widgets{
+
+        .homeContent {
+            margin: 20px;
+            padding: 10px;
+            height: 850px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            .left {
+                -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+                box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+                margin-top: 10px;
+                margin-bottom: 15px;
+                margin-right: 40px;
+                margin-left: 10px;
+                width: 25%;
+                height: 780px;
+                border-radius: 15px;
+                .infoTop{
+                    width: 100%;
+                    height: 25%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    .profileBg{
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        position: relative;
+                        width: 100%;
+                        height: 65%;
+                        background-image: url('../../../resource/pexels-essow-936722.jpg');
+                        background-size: cover;
+                        background-position: center top;
+                        border-top-left-radius: 15px;
+                        border-top-right-radius: 15px ;
+                    }
+
+                    .profilePics{
+                        width: 110%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: absolute;
+                        top: 65px;
+                        left: -15px;
+
+                        .avatar{
+                            width: 150px;
+                            height: 150px;
+                            border-radius: 50%;
+                        }
+                    }
+                    
+                }
+                .infoMiddle{
+                    padding-top: 20px;
+                    width: 100%;
+                    height: 15%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    .companyName{
+                        font-size: 28px;
+                        margin-bottom: 5px;
+                    }
+                    .companyNameDetail{
+                        font-size: 16px;
+                        margin-bottom: 20px;
+                        color: #747474;
+                    }
+                    .editProfile{
+                        font-size: 14px;
+                        margin-bottom: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #588d5d;
+                        .iconEditProfile{
+                            font-size: 14px;
+                            margin-right: 5px;
+                            color: #588d5d;
+                        }
+                    }
+                }
+                .infoBottom{
+                    padding-left: 20px;
+                    margin-right: 10px;
+                    width: 94%;
+                    height: 57%;
+                    display: flex;
+                    flex-direction: column;
+                    .infoContent{
+                        
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                        .sectionTitle{
+                            height: 20px;
+                            align-items: center;
+                            justify-content: flex-start;
+                            
+                            font-size: 14px;
+                            color: #4d4d4d;
+                        }
+                        .sectionDetail{
+                            font-size: 14px;
+                            height: 20px;
+                            
+                        }
+                        .sectionDetailAktif{
+                            font-size: 14px;
+                            height: 20px;
+                            
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+                        .sectionDetailEmail{
+                            font-size: 14px;
+                            height: 20px;
+                            
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            .iconEmail{
+                                font-size: 16px;
+                                margin-right: 5px;
+                                color: #588d5d;
+                            }
+                            .emailText{
+                                color: #588d5d;
+                                text-decoration: underline;
+                            }
+                        }
+                        .sectionDetailPhone{
+                            font-size: 14px;
+                            height: 20px;
+
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            .iconPhone{
+                                font-size: 16px;
+                                margin-right: 5px;
+                                color: #588d5d;
+                            }
+                            .phoneText{
+                                color: #588d5d;
+                            }
+                        }
+                        .sectionDetailWebsite{
+                            font-size: 14px;
+                            height: 20px;
+                           
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            .iconWebsite{
+                                font-size: 16px;
+                                margin-right: 5px;
+                                color: #588d5d;
+                            }
+                            .websiteText{
+                                color: #588d5d;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .right {
+                margin-left: 40px;
+                margin-right: 10px;
+                flex: 2;
+                height: 750px;
+                border-radius: 15px;
+
+                .location-bar {
+                    -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+                    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+                    flex: 2;
+                    height: 150px;
+                    border-radius: 15px;
+                    padding-right: 15px;
+                    padding-left: 15px;
+
+                    .locationTitle {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding-top: 10px;
+                        margin: 10px;
+
+                        h2 {
+                            color: #747474;
+                        }
+
+                        span {
+                            color: #747474;
+                        }
+
+                    }
+
+
+
+                    .hub {
+                        display: flex;
+                        margin: 10px;
+                        height: 100px;
+                        justify-content: space-around;
+                        align-items: center;
+                        gap: 15px;
+
+                        .main {
+                            border: 1px solid darkgray;
+                            display: flex;
+                            flex: 1;
+                            justify-content: center;
+                            align-items: center;
+                            height: 75px;
+                            background-color: #42934a;
+                            border-radius: 10px;
+
+                            .mainContent {
+                                display: flex;
+                                flex: 1;
+                                align-items: center;
+                                justify-content: space-between;
+                                padding-left: 15px;
+                                padding-right: 15px;
+
+                                .icon {
+                                    font-size: 48px;
+                                    color: white;
+                                }
+
+                                .sub {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content: center;
+
+                                    .amount {
+                                        font-size: 24px;
+                                        color: white;
+                                    }
+
+                                    .text {
+                                        font-size: 12px;
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+
+                        .sublv1 {
+                            border: 1px solid darkgray;
+                            display: flex;
+                            flex: 1;
+                            justify-content: center;
+                            align-items: center;
+                            height: 75px;
+                            background-color: #42934a;
+                            border-radius: 10px;
+
+                            .mainContent {
+                                display: flex;
+                                flex: 1;
+                                align-items: center;
+                                justify-content: space-between;
+                                padding-left: 15px;
+                                padding-right: 15px;
+
+                                .icon {
+                                    font-size: 48px;
+                                    color: white;
+                                }
+
+                                .sub {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-end;
+                                    justify-content: center;
+
+                                    .amount {
+                                        font-size: 24px;
+                                        color: white;
+                                    }
+
+                                    .text {
+                                        font-size: 12px;
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+
+                        .sublv2 {
+                            border: 1px solid darkgray;
+                            display: flex;
+                            flex: 1;
+                            justify-content: center;
+                            align-items: center;
+                            height: 75px;
+                            background-color: #42934a;
+                            border-radius: 10px;
+
+                            .mainContent {
+                                display: flex;
+                                flex: 1;
+                                align-items: center;
+                                justify-content: space-between;
+                                padding-left: 15px;
+                                padding-right: 15px;
+
+                                .icon {
+                                    font-size: 48px;
+                                    color: white;
+                                }
+
+                                .sub {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-end;
+                                    justify-content: center;
+
+                                    .amount {
+                                        font-size: 24px;
+                                        color: white;
+                                    }
+
+                                    .text {
+                                        font-size: 12px;
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .rightBottom {
+                    display: flex;
+                    gap: 40px;
+                    height: 550px;
+                    border-radius: 15px;
+                    margin-top: 40px;
+
+                    .rightBottom1 {
+                        width: 50%;
+                        height: 590px;
+                        border-radius: 15px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 50px;
+
+                        .rb1 {
+                            -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+                            box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+                            width: 100%;
+                            height: 270px;
+                            border-radius: 10px;
+
+                            .title {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                padding: 20px;
+                            }
+
+                            .bodyrb1 {
+                                width: 100%;
+                                height: 190px;
+
+                                .content1 {
+                                    width: 100%;
+                                    height: 95px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+
+                                    .c1 {
+                                        margin-right: 15px;
+                                        margin-left: 15px;
+                                        background: #E5D302;
+                                        background: -moz-linear-gradient(-45deg, #E5D302 0%, #A4B307 100%);
+                                        background: -webkit-linear-gradient(-45deg, #E5D302 0%, #A4B307 100%);
+                                        background: linear-gradient(135deg, #E5D302 0%, #A4B307 100%);
+                                        display: flex;
+                                        width: 25%;
+                                        height: 80%;
+                                        align-items: flex-end;
+                                        justify-content: flex-end;
+                                        border-radius: 10px;
+
+                                        span {
+                                            margin-bottom: 10px;
+                                            margin-right: 10px;
+                                            color: white;
+                                        }
+                                    }
+
+                                    .c2 {
+
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 5px;
+                                        width: 60%;
+                                        height: 80%;
+                                        align-items: flex-start;
+                                        justify-content: flex-start;
+                                        margin-right: 10px;
+
+                                        .cardName {
+                                            margin-bottom: 10px;
+                                            display: flex;
+                                            width: 100%;
+                                            align-items: center;
+                                            justify-content: space-between;
+
+                                            .cn1 {
+                                                span {
+                                                    font-size: 14px;
+                                                }
+                                            }
+
+                                            .cn2 {
+                                                .iconCreate {
+                                                    font-size: 18px;
+                                                    color: #42934a;
+                                                }
+
+                                                .iconDelete {
+                                                    font-size: 18px;
+                                                    color: red;
+                                                }
+                                            }
+
+                                        }
+
+                                        .cardDetail {
+                                            font-size: 12px;
+                                            color: gray;
+                                        }
+
+                                        .cardCurrency {
+                                            font-size: 14px;
+                                            color: gray;
+                                        }
+                                    }
+                                }
+
+                                .content2 {
+                                    width: 100%;
+                                    height: 95px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+
+                                    .c1 {
+                                        margin-right: 15px;
+                                        margin-left: 15px;
+                                        background: #60CAE3;
+                                        background: -moz-linear-gradient(-45deg, #60CAE3 0%, #207EBB 91%, #207C92 100%);
+                                        background: -webkit-linear-gradient(-45deg, #60CAE3 0%, #207EBB 91%, #207C92 100%);
+                                        background: linear-gradient(135deg, #60CAE3 0%, #207EBB 91%, #207C92 100%);
+                                        display: flex;
+                                        width: 25%;
+                                        height: 80%;
+                                        align-items: flex-end;
+                                        justify-content: flex-end;
+                                        border-radius: 10px;
+
+                                        span {
+                                            margin-bottom: 10px;
+                                            margin-right: 10px;
+                                            color: white;
+                                        }
+                                    }
+
+                                    .c2 {
+
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 5px;
+                                        width: 60%;
+                                        height: 80%;
+                                        align-items: flex-start;
+                                        justify-content: flex-start;
+                                        margin-right: 10px;
+
+                                        .cardName {
+                                            margin-bottom: 10px;
+                                            display: flex;
+                                            width: 100%;
+                                            align-items: center;
+                                            justify-content: space-between;
+
+                                            .cn1 {
+                                                span {
+                                                    font-size: 14px;
+                                                }
+                                            }
+
+                                            .cn2 {
+                                                .iconCreate {
+                                                    font-size: 18px;
+                                                    color: #42934a;
+                                                }
+
+                                                .iconDelete {
+                                                    font-size: 18px;
+                                                    color: red;
+                                                }
+                                            }
+
+                                        }
+
+                                        .cardDetail {
+                                            font-size: 12px;
+                                            color: gray;
+                                        }
+
+                                        .cardCurrency {
+                                            font-size: 14px;
+                                            color: gray;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .rb2 {
+                            -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+                            box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+                            width: 100%;
+                            height: 270px;
+                            border-radius: 10px;
+
+                            .title {
+                                display: flex;
+                                justify-content: space-between;
+                                padding: 20px;
+                                .titleSeeAll{
+                                    color: #42934a;
+                                }
+                            }
+
+                            .bodyrb2{
+                                width: 100%;
+                                height: 200px;
+                                
+                                .contentbodyrb2{
+                                    width: 100%;
+                                    height: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    justify-content: center;
+                                    gap: 10px;
+
+                                    .contentRelation1{
+                                        width: 80%;
+                                        height: 100%;
+                                        margin-left: 20px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: flex-start;
+                                        .contentRelation1-1{
+                                            margin-right: 10px;
+                                            .iconShare{
+                                                font-size: 32px;
+                                                color: #4d4d4d;
+                                            }
+                                        }
+                                        .contentRelation1-2{
+                                            .cAmount{
+                                                font-size: 20px;
+                                                color: #4d4d4d;
+                                            }
+                                            .cText{
+                                                font-size: 12px;
+                                                color: #4d4d4d;
+                                            }
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+
+                    .rightBottom2 {
+                        -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+                        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+                        width: 50%;
+                        height: 590px;
+                        border-radius: 15px;
+
+                        .activitySection{
+                            margin: 20px;
+                            height: 93%;
+                            
+                            .activityTitle{
+                                display: flex;
+                                width: 100%;
+                                height: 50px;
+                                align-items: center;
+                                
+                            }
+
+                            .activityBody{
+                                display: flex;
+                                width: 100%;
+                                height: 500px;
+                                .bodyContent{
+                                    display: flex;
+                                    flex-direction: column;
+                                    .contentText{
+                                        flex-wrap: wrap;
+                                        margin-bottom: 10px;
+                                    }
+                                    .contentDate{
+                                        color: #747474;
+                                        margin-bottom: 20px;
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+
+
+            }
+        }
+
+
+        .widgets {
             display: flex;
             padding: 20px;
         }
     }
-    .charts{
+
+    .charts {
         display: flex;
         flex: 4;
     }

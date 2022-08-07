@@ -8,7 +8,7 @@ const navbar = () => {
     <div className='navbar'>
       <div className="wrapper">
         {/* <SearchBar /> */}
-        <h1>Admin Control</h1>
+        <h3>Mitramas Infosys Global Admin System</h3>
         <div className="items">
           <div className="item">
             <LanguageIcon className='icon'/>
@@ -20,6 +20,7 @@ const navbar = () => {
           </div>
           <div className="item">
             <img src='https://images.pexels.com/photos/8230825/pexels-photo-8230825.jpeg' alt='' className='avatar' />
+            <span>John Doe</span>
           </div>
         </div>
       </div>
