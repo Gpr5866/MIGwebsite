@@ -38,7 +38,7 @@ function List() {
     const result = await API.delete(`/${id}`)
     if (result.data.acknowledged) {
       setTimeout(() => {
-        window.location.reload()
+        window.location.href = window.location.href
       }, 250);
     }
   }
@@ -57,7 +57,7 @@ function List() {
 
   function clearSearch() {
     setTimeout(() => {
-      window.location.reload()
+      window.location.href = window.location.href
     }, 250);
   }
 
