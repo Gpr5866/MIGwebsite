@@ -100,6 +100,7 @@ function Adduser() {
                                 <div className="formInput">
                                     <label>Country</label>
                                     <select id="country" name="country" className='selectCountry' onChange={(e) => { setCountry(e.target.value) }}>
+                                        <option value='  ' selected>  </option>
                                         <option value="Afghanistan">Afghanistan</option>
                                         <option value="Åland Islands">Åland Islands</option>
                                         <option value="Albania">Albania</option>

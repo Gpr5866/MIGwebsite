@@ -27,7 +27,7 @@ function List() {
     setListUser(result)
   }
 
-  
+
 
   useEffect(() => {
     _getListUser();
@@ -37,7 +37,9 @@ function List() {
   async function deleteUser(id) {
     const result = await API.delete(`/${id}`)
     if (result.data.acknowledged) {
-      window.location.reload()
+      setTimeout(() => {
+        window.location.reload()
+      }, 250);
     }
   }
 
@@ -54,7 +56,9 @@ function List() {
   }
 
   function clearSearch() {
-    window.location.reload()
+    setTimeout(() => {
+      window.location.reload()
+    }, 250);
   }
 
   function sortTable(type) {
