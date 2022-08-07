@@ -37,9 +37,7 @@ function List() {
   async function deleteUser(id) {
     const result = await API.delete(`/${id}`)
     if (result.data.acknowledged) {
-      setTimeout(() => {
-        window.location.href = window.location.href
-      }, 250);
+      window.location = window.location
     }
   }
 
@@ -56,9 +54,7 @@ function List() {
   }
 
   function clearSearch() {
-    setTimeout(() => {
-      window.location.href = window.location.href
-    }, 250);
+    window.location = window.location
   }
 
   function sortTable(type) {
