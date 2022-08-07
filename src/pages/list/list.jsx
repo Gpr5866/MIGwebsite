@@ -11,11 +11,12 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import AddIcon from '@mui/icons-material/Add';
 import API from '../../components/api'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import SearchIcon from '@mui/icons-material/Search';
 import CancelIcon from '@mui/icons-material/Cancel';
 
 function List() {
+  
   const [listUser, setListUser] = useState([]);
   const [listUserSorted, setListUserSorted] = useState([]);
   const [listUserSearched, setListUserSearched] = useState([]);
@@ -26,20 +27,11 @@ function List() {
     const result = await API.get('/').then(({ data }) => data)
     setListUser(result)
   }
-
-
-
+  
   useEffect(() => {
     _getListUser();
     console.log('array listUser :', JSON.stringify(listUser, null, 2));
   }, [])
-
-  async function deleteUser(id) {
-    const result = await API.delete(`/${id}`)
-    if (result.data.acknowledged) {
-      window.history.go(0)
-    }
-  }
 
   function searchTable() {
     console.log(JSON.stringify(searchKeyword.toLowerCase()));
@@ -179,7 +171,7 @@ function List() {
                           <Link to={'/edit-user/' + row._id} state={{ id: row._id }} style={{ textDecoration: 'none' }}>
                             <div className='editButton'>Edit</div>
                           </Link>
-                          <div className='deleteButton' onClick={() => { deleteUser(row._id) }}>Delete</div>
+                          {/* <div className='deleteButton' onClick={() => { deleteUser(row._id) }}>Delete</div> */}
                         </div>
                       </TableCell>
                     </TableRow>

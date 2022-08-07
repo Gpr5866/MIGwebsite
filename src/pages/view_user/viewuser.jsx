@@ -4,10 +4,14 @@ import Sidebar from '../../components/sidebar/sidebar'
 import Navbar from '../../components/navbar/navbar'
 import API from '../../components/api'
 import Button from '@mui/material/Button';
-import {useParams} from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
+import swal from 'sweetalert'
 
 function Viewuser() {
     const id = useParams()
+    const navigate = useNavigate()
+    const location = useLocation()
 
     const [idUser, setIdUser] = useState('');
     const [name, setName] = useState('');
@@ -22,9 +26,9 @@ function Viewuser() {
     }, [])
 
     async function _getUserById(userId) {
-        let result = await API.get('/'+ userId)
+        let result = await API.get('/' + userId)
         console.log(result);
-        if(result.status == 200) {
+        if (result.status == 200) {
             setIdUser(result.data._id)
             setName(result.data.name)
             setAddress(result.data.address)
@@ -34,7 +38,45 @@ function Viewuser() {
             setStatus(result.data.status)
         }
     }
-    
+
+    function handleConfirmAlert() {
+        swal({
+            title: "Are you sure?",
+            icon: "info",
+            closeOnClickOutside: true,
+            buttons: {
+                cancel: {
+                    text: "Cancel",
+                    value: false,
+                    visible: true,
+                    className: "",
+                    closeModal: true,
+                },
+                confirm: {
+                    text: "OK",
+                    value: true,
+                    visible: true,
+                    className: "",
+                    closeModal: false
+                }
+            },
+        }).then((value) => {
+            console.log(value);
+            if (value === true) {
+                swal.close()
+                deleteUser(idUser)
+            }
+        })
+    }
+
+    async function deleteUser(id) {
+        const result = await API.delete(`/${id}`)
+        if (result.data.acknowledged) {
+            // window.history.go(0)
+            navigate('/list-user' + location.search)
+        }
+    }
+
 
     return (
         <div className='viewUser'>
@@ -79,6 +121,7 @@ function Viewuser() {
                     </div>
                     <div className="buttonBack">
                         <Button variant='outlined' size='large' color='success' onClick={() => window.history.back()}>Back</Button>
+                        <Button variant='outlined' size='large' color='error' onClick={() => handleConfirmAlert()}>Delete</Button>
                     </div>
                 </div>
             </div>
