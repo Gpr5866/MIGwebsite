@@ -27,6 +27,8 @@ function List() {
     setListUser(result)
   }
 
+  
+
   useEffect(() => {
     _getListUser();
     console.log('array listUser :', JSON.stringify(listUser, null, 2));
