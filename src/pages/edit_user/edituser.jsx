@@ -47,6 +47,7 @@ function Edituser() {
         }).then((value) => {
             console.log(value);
             if(value === true){
+                swal.close()
                 handleSaveForm()
             }
         })
@@ -84,7 +85,7 @@ function Edituser() {
 
         console.log(result);
         if(result.status == 200){
-            window.location.assign('/list-user')
+            window.history.back()
         }
     }
 

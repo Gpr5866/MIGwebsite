@@ -37,6 +37,7 @@ function Adduser() {
         }).then((value) => {
             console.log(value);
             if(value === true){
+                swal.close()
                 handleSaveForm()
             }
         })
@@ -60,7 +61,7 @@ function Adduser() {
 
         console.log(result);
         if (result.status == 200) {
-            window.location.assign('/list-user')
+            window.history.back()
         }
     }
 
