@@ -37,7 +37,7 @@ function List() {
   async function deleteUser(id) {
     const result = await API.delete(`/${id}`)
     if (result.data.acknowledged) {
-      window.location = window.location
+      window.history.go(0)
     }
   }
 
@@ -54,7 +54,7 @@ function List() {
   }
 
   function clearSearch() {
-    window.location = window.location
+    window.history.go(0)
   }
 
   function sortTable(type) {
