@@ -41,8 +41,8 @@ function Viewuser() {
 
     function handleConfirmAlert() {
         swal({
-            title: "Are you sure?",
-            icon: "info",
+            title: "Are you sure you want to delete this user ?",
+            icon: "warning",
             closeOnClickOutside: true,
             buttons: {
                 cancel: {
@@ -53,7 +53,7 @@ function Viewuser() {
                     closeModal: true,
                 },
                 confirm: {
-                    text: "OK",
+                    text: "Delete",
                     value: true,
                     visible: true,
                     className: "",
