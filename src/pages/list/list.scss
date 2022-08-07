@@ -1,0 +1,152 @@
+.list{
+    display: flex;
+    width: 100%;
+    
+    .listContainer{
+        flex: 6;
+
+        .contentList{
+            -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+            box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+            margin: 10px;
+            padding: 10px;
+            border-radius: 15px;
+            .search{
+                width: 15%;
+                display: flex;
+                .searchBar{
+                    display: flex;
+                    margin-bottom: 10px;
+                    justify-content: space-between;
+                    border: 0.5px  solid lightgray;
+                    padding: 3px;
+            
+                    .searchInput{
+                        display: flex;
+                        input{
+                            border: none;
+                            outline: none;
+                            &::placeholder{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    
+                    .searchButton{
+                        display: flex;
+                        cursor: pointer;
+                        color: lightslategray;
+                    }
+                }
+            }
+
+            
+
+            .addNewUser{
+                display: flex;
+                margin-top: 10px;
+                justify-content: flex-end;
+                .titleBar{
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .title{
+                        display: flex;
+                        margin-bottom: 10px;
+                        color: #2C3333;
+                    }
+                    
+                    .buttonAddNewUser{
+                        display: flex;
+                        margin-right: 10px;
+                        padding: 5px 10px;
+                        background-color: #D3EBCD;
+                        border: 1px solid #D3EBCD;
+                        border-radius: 15px;
+                        cursor: pointer;
+        
+                        .icon{
+                            align-items: center;
+                            color: #2C3333;
+                        }
+        
+                        .textUser{
+                            color: #2C3333;
+                            margin-top: 3px;
+                            align-items: center;
+                        }
+                    }
+                }
+                
+                
+            }
+    
+            .status{
+                padding: 5px;
+                border-radius: 5px;
+                color: #2C3333;
+    
+                &.Active{
+                    background-color: #D3EBCD;
+                }
+    
+                &.Inactive{
+                    background-color: #FF6B6B;
+                }
+            }
+    
+            .tableContainer{
+                margin-right: 5px;
+                margin-top: 5px;
+                border-radius: 10px;
+    
+                .tableHead{
+                    cursor: pointer;
+                }
+    
+                .cellAction{
+                    display: flex;
+                    justify-content: center;
+                    gap: 25px;
+                    
+                    .viewButton{
+                        align-items: center;
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                        color: white;
+                        background-color: #2C3333;
+                        border: 1px solid #2C3333;
+                        cursor: pointer;
+                    }
+    
+                    .editButton{
+                        align-items: center;
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                        color: white;
+                        background-color: #F0A500;
+                        border: 1px solid #F0A500;
+                        cursor: pointer;
+                    }
+            
+                    .deleteButton{
+                        align-items: center;
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                        color: white;
+                        background-color: #FF6B6B;
+                        border: 1px solid #FF6B6B;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+        }
+
+        
+
+        
+    }
+}
